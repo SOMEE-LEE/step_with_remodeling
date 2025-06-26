@@ -1,0 +1,505 @@
+!SESSION 2025-06-25 14:05:51.296 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-25 14:05:55.249
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.mylyn.tasks.index.core 4 0 2025-06-25 14:05:55.809
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.tasks.index.core [817]
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+       org.apache.lucene.lucene-analysis-common [792]
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+              org.apache.lucene.lucene-core [793]
+                No resolution report for the bundle.         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+           -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.store
+           -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.standard
+           -> Export-Package: org.apache.lucene.analysis.standard; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.analysis.tokenattributes,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.codecs
+           -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+       org.apache.lucene.lucene-queryparser [794]
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.payloads
+           -> Export-Package: org.apache.lucene.queries.payloads; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.queries.spans,org.apache.lucene.search,org.apache.lucene.util"
+              org.apache.lucene.queries [796]
+                No resolution report for the bundle.         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+           -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.mlt
+           -> Export-Package: org.apache.lucene.queries.mlt; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.intervals
+           -> Export-Package: org.apache.lucene.queries.intervals; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.sandbox.queries
+           -> Export-Package: org.apache.lucene.sandbox.queries; bundle-symbolic-name="org.apache.lucene.lucene-sandbox"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search"
+              org.apache.lucene.lucene-sandbox [795]
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+                  -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.search
+                  -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.util
+                  -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+                Unresolved requirement: Import-Package: org.apache.lucene.index
+                  -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+                  -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis
+                  -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+                  -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.document
+                  -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.search.similarities
+                  -> Export-Package: org.apache.lucene.search.similarities; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.mutable
+                  -> Export-Package: org.apache.lucene.util.mutable; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs.lucene90.blocktree
+                  -> Export-Package: org.apache.lucene.codecs.lucene90.blocktree; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.codecs,org.apache.lucene.index,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs
+                  -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.geo
+                  -> Export-Package: org.apache.lucene.geo; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index"
+                Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+                  -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+                Unresolved requirement: Import-Package: org.apache.lucene.store
+                  -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"] because it is exposed to package 'org.apache.lucene.analysis' from resources org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"] and org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-core)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle: org.apache.lucene.lucene-core
+  org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"]
+
+Chain 2:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-analysis-common)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="9.5.0"; osgi.wiring.bundle="org.apache.lucene.lucene-analysis-common"
+  org.apache.lucene.lucene-analysis-common [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-analysis-common"]
+    import: (osgi.wiring.package=org.apache.lucene.analysis)
+     |
+    export: osgi.wiring.package: org.apache.lucene.analysis
+  org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-25 14:06:21.021
+!MESSAGE Logback config file: C:\sts\workspace\step_with_remodeling\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 14:06:21.811
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 14:06:21.811
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 14:06:22.335
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 14:06:22.335
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2025-06-25 14:06:27.736
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-06-25 14:06:29.356
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\somee'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-25 14:06:31.733
+!MESSAGE May have failed to replace token 		//window.ide 'dummy'. Replaced/injected later by STS browser integration.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-25 14:06:31.735
+!MESSAGE May have failed to replace token 		//The dummy helps preview/test the page in an external browser.
+!SESSION 2025-06-25 14:07:30.253 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-25 14:07:34.091
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.mylyn.tasks.index.core 4 0 2025-06-25 14:07:34.833
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.tasks.index.core [817]
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+       org.apache.lucene.lucene-core [793]
+         No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+       org.apache.lucene.lucene-queryparser [794]
+         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.sandbox.queries
+           -> Export-Package: org.apache.lucene.sandbox.queries; bundle-symbolic-name="org.apache.lucene.lucene-sandbox"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search"
+              org.apache.lucene.lucene-sandbox [795]
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs.lucene90.blocktree
+                  -> Export-Package: org.apache.lucene.codecs.lucene90.blocktree; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.codecs,org.apache.lucene.index,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+                  -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+                     org.apache.lucene.queries [796]
+                       No resolution report for the bundle.                Unresolved requirement: Import-Package: org.apache.lucene.geo
+                  -> Export-Package: org.apache.lucene.geo; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index"
+                Unresolved requirement: Import-Package: org.apache.lucene.search
+                  -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.search.similarities
+                  -> Export-Package: org.apache.lucene.search.similarities; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search"
+                Unresolved requirement: Import-Package: org.apache.lucene.store
+                  -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis
+                  -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.mutable
+                  -> Export-Package: org.apache.lucene.util.mutable; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs
+                  -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.util
+                  -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+                  -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.document
+                  -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.index
+                  -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+                  -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+                  -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.mlt
+           -> Export-Package: org.apache.lucene.queries.mlt; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.intervals
+           -> Export-Package: org.apache.lucene.queries.intervals; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+           -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.payloads
+           -> Export-Package: org.apache.lucene.queries.payloads; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.queries.spans,org.apache.lucene.search,org.apache.lucene.util"
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+       org.apache.lucene.lucene-analysis-common [792]
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+           -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.store
+           -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.standard
+           -> Export-Package: org.apache.lucene.analysis.standard; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.analysis.tokenattributes,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.codecs
+           -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"] because it is exposed to package 'org.apache.lucene.analysis' from resources org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"] and org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-core)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle: org.apache.lucene.lucene-core
+  org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"]
+
+Chain 2:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-analysis-common)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="9.5.0"; osgi.wiring.bundle="org.apache.lucene.lucene-analysis-common"
+  org.apache.lucene.lucene-analysis-common [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-analysis-common"]
+    import: (osgi.wiring.package=org.apache.lucene.analysis)
+     |
+    export: osgi.wiring.package: org.apache.lucene.analysis
+  org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-25 14:08:16.729
+!MESSAGE Logback config file: C:\sts\workspace\step_with_remodeling\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 14:08:17.553
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 14:08:17.553
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 14:08:18.198
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 14:08:18.198
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2025-06-25 14:08:24.126
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-06-25 14:08:25.438
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\somee'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-25 14:08:26.077
+!MESSAGE May have failed to replace token 		//window.ide 'dummy'. Replaced/injected later by STS browser integration.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-25 14:08:26.079
+!MESSAGE May have failed to replace token 		//The dummy helps preview/test the page in an external browser.
+!SESSION 2025-06-26 16:51:07.738 -----------------------------------------------
+eclipse.buildId=4.24.0.202407191504
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-26 16:51:12.268
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.mylyn.tasks.index.core 4 0 2025-06-26 16:51:12.804
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.tasks.index.core [817]
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-analysis-common; bundle-version="9.5.0"
+       org.apache.lucene.lucene-analysis-common [792]
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+              org.apache.lucene.lucene-core [793]
+                No resolution report for the bundle.         Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+           -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.standard
+           -> Export-Package: org.apache.lucene.analysis.standard; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.analysis.tokenattributes,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.codecs
+           -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.store
+           -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-queryparser; bundle-version="9.5.0"
+       org.apache.lucene.lucene-queryparser [794]
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+           -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+              org.apache.lucene.queries [796]
+                No resolution report for the bundle.         Unresolved requirement: Import-Package: org.apache.lucene.queries.mlt
+           -> Export-Package: org.apache.lucene.queries.mlt; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+         Unresolved requirement: Import-Package: org.apache.lucene.document
+           -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.intervals
+           -> Export-Package: org.apache.lucene.queries.intervals; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.index
+           -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis
+           -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+         Unresolved requirement: Import-Package: org.apache.lucene.sandbox.queries
+           -> Export-Package: org.apache.lucene.sandbox.queries; bundle-symbolic-name="org.apache.lucene.lucene-sandbox"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search"
+              org.apache.lucene.lucene-sandbox [795]
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs
+                  -> Export-Package: org.apache.lucene.codecs; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.search.similarities
+                  -> Export-Package: org.apache.lucene.search.similarities; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+                  -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.queries.spans
+                  -> Export-Package: org.apache.lucene.queries.spans; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.search.similarities"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.mutable
+                  -> Export-Package: org.apache.lucene.util.mutable; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+                  -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.util.fst
+                  -> Export-Package: org.apache.lucene.util.fst; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.store,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.geo
+                  -> Export-Package: org.apache.lucene.geo; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index"
+                Unresolved requirement: Import-Package: org.apache.lucene.store
+                  -> Export-Package: org.apache.lucene.store; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.analysis
+                  -> Export-Package: org.apache.lucene.analysis; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.document
+                  -> Export-Package: org.apache.lucene.document; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.geo,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+                Unresolved requirement: Import-Package: org.apache.lucene.codecs.lucene90.blocktree
+                  -> Export-Package: org.apache.lucene.codecs.lucene90.blocktree; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.codecs,org.apache.lucene.index,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.index
+                  -> Export-Package: org.apache.lucene.index; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.codecs,org.apache.lucene.document,org.apache.lucene.search,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.search
+                  -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+                Unresolved requirement: Import-Package: org.apache.lucene.util
+                  -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.util.automaton
+           -> Export-Package: org.apache.lucene.util.automaton; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.util
+           -> Export-Package: org.apache.lucene.util; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.analysis,org.apache.lucene.index,org.apache.lucene.search,org.apache.lucene.store"
+         Unresolved requirement: Import-Package: org.apache.lucene.queries.payloads
+           -> Export-Package: org.apache.lucene.queries.payloads; bundle-symbolic-name="org.apache.lucene.queries"; bundle-version="9.10.0.v20240221-0830"; version="9.10.0"; uses:="org.apache.lucene.index,org.apache.lucene.queries.spans,org.apache.lucene.search,org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.analysis.tokenattributes
+           -> Export-Package: org.apache.lucene.analysis.tokenattributes; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.util"
+         Unresolved requirement: Import-Package: org.apache.lucene.search
+           -> Export-Package: org.apache.lucene.search; bundle-symbolic-name="org.apache.lucene.lucene-core"; bundle-version="9.5.0"; version="9.5.0"; uses:="org.apache.lucene.document,org.apache.lucene.index,org.apache.lucene.search.similarities,org.apache.lucene.store,org.apache.lucene.util,org.apache.lucene.util.automaton"
+  Unresolved requirement: Require-Bundle: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+    -> Bundle-SymbolicName: org.apache.lucene.lucene-core; bundle-version="9.5.0"
+  Bundle was not resolved because of a uses constraint violation.
+  org.apache.felix.resolver.reason.ReasonException: Uses constraint violation. Unable to resolve resource org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"] because it is exposed to package 'org.apache.lucene.analysis' from resources org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"] and org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-core)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle: org.apache.lucene.lucene-core
+  org.apache.lucene.lucene-core [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-core"]
+
+Chain 2:
+  org.eclipse.mylyn.tasks.index.core [osgi.identity; type="osgi.bundle"; version:Version="3.26.0.v20230416-1636"; osgi.identity="org.eclipse.mylyn.tasks.index.core"]
+    require: (&(osgi.wiring.bundle=org.apache.lucene.lucene-analysis-common)(bundle-version>=9.5.0))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="9.5.0"; osgi.wiring.bundle="org.apache.lucene.lucene-analysis-common"
+  org.apache.lucene.lucene-analysis-common [osgi.identity; type="osgi.bundle"; version:Version="9.5.0"; osgi.identity="org.apache.lucene.lucene-analysis-common"]
+    import: (osgi.wiring.package=org.apache.lucene.analysis)
+     |
+    export: osgi.wiring.package: org.apache.lucene.analysis
+  org.apache.lucene.core [osgi.identity; type="osgi.bundle"; version:Version="9.10.0.v20240221-0830"; osgi.identity="org.apache.lucene.core"]
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2074)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2065)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2005)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1968)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1884)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY ch.qos.logback.classic 1 0 2025-06-26 16:51:18.622
+!MESSAGE Logback config file: C:\sts\workspace\step_with_remodeling\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 16:51:19.259
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 16:51:19.259
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 16:51:19.672
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 16:51:19.672
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.mylyn.tasks.ui 2 0 2025-06-26 16:51:23.721
+!MESSAGE No search provider was registered. Tasks search is not available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-06-26 16:51:24.767
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\somee'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-26 16:51:25.328
+!MESSAGE May have failed to replace token 		//window.ide 'dummy'. Replaced/injected later by STS browser integration.
+
+!ENTRY org.springsource.ide.eclipse.commons.core 4 0 2025-06-26 16:51:25.329
+!MESSAGE May have failed to replace token 		//The dummy helps preview/test the page in an external browser.
+
+!ENTRY org.eclipse.ui.ide 4 0 2025-06-26 16:51:48.081
+!MESSAGE Could not import project located at C:\sts\workspace\step_with_remodeling
+!STACK 0
+org.eclipse.ui.internal.wizards.datatransfer.CouldNotImportProjectException: Could not import project located at C:\sts\workspace\step_with_remodeling
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:555)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.run(SmartImportJob.java:246)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:211)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:95)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:305)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:291)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.createOrImportProject(SmartImportJob.java:594)
+	at org.eclipse.ui.internal.wizards.datatransfer.SmartImportJob.toExistingOrNewProject(SmartImportJob.java:542)
+	... 2 more
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-06-26 16:51:55.487
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-06-26 16:51:55.490
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.springsource.ide.eclipse.dashboard.internal.ui.editors.AggregateFeedJob
