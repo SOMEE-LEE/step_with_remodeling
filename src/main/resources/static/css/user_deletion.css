@@ -1,0 +1,21 @@
+
+.delete_area h3 {
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+input[type='password'] {
+    width: 400px;
+}
+
+input[type='submit'] {
+    background: var(--point-color1);
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    gap: 0 10px;
+}

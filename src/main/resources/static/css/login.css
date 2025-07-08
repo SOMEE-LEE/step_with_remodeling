@@ -1,0 +1,136 @@
+/* 컬러 변수 */
+:root {
+    --point-color1: #DB6551;
+    --point-color2: #fdd9d3;
+    --point-color3: #a03a29;
+    --line-color:#dfdfdf;
+    --txt-color-400: #777;
+    --txt-color-500: #444;
+    --txt-color-600: #000;
+}
+
+/* 로그인 페이지 요소 */
+#wrap {
+  /* background: var(--point-color2); */
+}
+
+main {
+  background: #fff;
+  border: 1px solid var(--line-color);
+  border-radius: 5px;
+}
+
+.login_area {
+    padding: 20px;
+}
+
+.login_area > h2 {
+    font-size: 3.2rem;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.login_element {
+  display: flex;
+  align-items: stretch; /* 버튼 높이를 input 두 개 높이에 맞춤 */
+  gap: 10px;
+  max-width: 400px;
+  padding-bottom: 25px;
+}
+
+.id_pw {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+
+#id:focus,
+#pw:focus {
+  border-color: black;
+}
+
+.login_btn {
+  padding: 0 20px;
+  font-size: 14px;
+  cursor: pointer;
+  background: var(--point-color1);
+  color: white;
+  border: none;
+}
+
+.find_join {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.find_join > a {
+    color: var(--txt-color-400);
+}
+
+.find_join  > a:hover {
+    text-decoration: underline;
+}
+
+.social_login {
+  padding-top: 15px;  
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
+}
+
+.social_login button {
+  width: 100%;
+  height: 48px;
+}
+
+.social_login .naver {
+  border: none;
+  background: #03C75A;
+  color: #fff;
+  padding: 10px;
+}
+
+.social_login .naver::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: url(/images/네이버로그인.png) no-repeat center center / 200%;
+  width: 15px;
+  height: 15px;
+  margin: -3px 4px 0 0;
+}
+
+.social_login .kakao {
+  border: none;
+  background: #FEE500;
+  color: black;
+  padding: 10px;
+}
+
+.social_login .kakao::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: url(/images/카카오로그인.png) no-repeat 0 0 / 100%;
+  width: 13px;
+  height: 15px;
+  margin: -1px 4px 0 0;
+}
+
+.social_login .google {
+  border: 1px solid var(--txt-color-400);
+  background: #fff;
+  position: relative;
+}
+
+.social_login .google::before {
+  content: '';
+  position: absolute;
+  top: 17px;
+  left: 95px;
+  background: url(/images/구글로그인.png) no-repeat 0 0 / 80%;
+  width: 15px;
+  height: 15px;
+}

@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스텝 위드 Step With</title>
-    <link rel="stylesheet" href="css/common-ui.css?v=<?php echo time(); ?>" type="text/css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/modal.js"></script>
+    <link rel="stylesheet" href="/css/common-ui.css?v=<?php echo time(); ?>" type="text/css">
+    <link rel="stylesheet" href="/css/user_deletion.css?v=<?php echo time(); ?>" type="text/css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/modal.js"></script>
+
 </head>
 <body>
     <div id="skip_navi">
@@ -79,12 +81,18 @@
             <section class="common_pages">
                 <div class="inner">
                     <div class="page_wrap">
-                        <h2>페이지 이름</h2>
-                        <!-- <a>전체 보기 메뉴</a> -->
+                        <h2>회원 탈퇴</h2>
                     </div>
                     <div class="content_wrap">
                         <h2 class="blind">페이지 콘텐츠</h2>
-                        <p>콘텐츠 예시</p>
+                        <form class="delete_area" method="post">
+                            <h3>'닉네임'계정의 회원 탈퇴를 계속 진행하시려면 <br>계정 비밀번호를 입력해주세요.
+                                <br>(부정 이용 방지를 위해 3개월간 동일한 아이디 및 휴대폰 번호로 재가입이 불가합니다)</h3>
+                            <div class="flex">
+                                <input type="password" placeholder="계정 비밀번호를 한번 더 입력해주세요." required>
+                                <input type="submit" value="회원 탈퇴하기">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

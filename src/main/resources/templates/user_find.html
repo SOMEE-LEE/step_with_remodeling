@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스텝 위드 Step With</title>
+    <link rel="stylesheet" href="/css/common-ui.css?v=<?php echo time(); ?>" type="text/css">
+    <link rel="stylesheet" href="/css/user_find.css?v=<?php echo time(); ?>" type="text/css">
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/modal.js"></script>
+</head>
+<body>
+    <div id="skip_navi">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <main id="#container">
+            <section class="find_area">
+                <h2>Step With 아이디/비밀번호 찾기</h2>
+                <form class="find_element" method="post">
+                    <!-- 인증번호 전송 안했을 시/번호입력안했을시 알림창은 구현 필요, 숫자 길이 제한 설정 필요 -->
+                    <input type="number" name="phone" id="phone" placeholder="가입한 휴대폰 번호를 입력하세요(숫자만 입력)" required/>
+                    <div class="btn_wrap">
+                        <!-- 버튼 클릭 시 문자 메시지 발송 이벤트 각각 처리 -->
+                        <button type="button" class="find_btn">이 번호로 아이디를 발송</button>
+                        <button type="button" class="find_btn">이 번호로 임시 비밀번호를 발송</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+main {
+  background: #fff;
+  border: 1px solid var(--line-color);
+  border-radius: 5px;
+}
+
+.find_area {
+    padding: 20px;
+}
+
+.find_area > h2 {
+    font-size: 3.2rem;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.find_element {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='number'] {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.btn_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.find_btn {
+    padding: 10px;
+    cursor: pointer;
+    background: var(--point-color2);
+    color: black;
+    border: none;
+}
+
+.find_btn:hover {
+    background: var(--point-color1);
+    color: white;
+    border: none;
+}
