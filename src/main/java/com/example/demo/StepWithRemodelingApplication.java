@@ -14,8 +14,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
     }
 )
 
-// exclude 부분: DB 연결 없이 테스트
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class StepWithRemodelingApplication {
 
 	public static void main(String[] args) {
