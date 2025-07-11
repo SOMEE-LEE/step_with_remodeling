@@ -9,6 +9,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/agree.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/user_join.js"></script>
 </head>
 <body>
     <div id="skip_navi">
@@ -22,8 +23,8 @@
                     <div class="phone_check">
                         <!-- 인증번호 전송 안했을 시/번호입력안했을시 알림창은 구현 필요, 숫자 길이 제한 설정 필요 -->
                         <!-- 이미 있는 전화번호 입력했을 때 알림창 구현 필요 -->
-                        <input type="number" name="phone" id="phone" placeholder="휴대폰 번호를 '-' 없이 입력하세요." required autocomplete="off"/>
-                        <button type="button">인증번호 전송</button>
+                        <input type="number" name="phone" id="phone" placeholder="'-'와 공백 없이 입력하세요." required autocomplete="off"/>
+                        <button type="button" id="sendSms">인증번호 전송</button>
                     </div>
                     <div class="phone_confirm">
                         <!-- 인증번호 6자리 입력한 휴대폰 본인인증 구현 필요, 인증번호 입력 안했을시 알림창 구현 필요,--> 
