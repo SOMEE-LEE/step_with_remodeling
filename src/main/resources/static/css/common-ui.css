@@ -216,8 +216,8 @@
 
   #cancelButton {
     border: none;
-    color: #fff;
-    background: var(--txt-color-500);
+    color: #000;
+    background: var(--line-color);
   }
 
   /* 글꼴 */
