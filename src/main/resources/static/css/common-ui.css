@@ -178,6 +178,47 @@
     font-size: 1.8rem;
   }
 
+  /* 커스텀 모달 팝업창 요소 */
+  #custom_modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+  }
+
+  #custom_modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 420px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #confirmButton {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    background: var(--point-color1);
+  }
+
+  #cancelButton {
+    border: none;
+    color: #fff;
+    background: var(--txt-color-500);
+  }
 
   /* 글꼴 */
   @font-face {
