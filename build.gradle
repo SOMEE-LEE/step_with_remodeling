@@ -35,6 +35,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
+    // Logback을 사용해 JSON 형식의 로그를 출력하거나 Logstash로 직접 로그를 전송하기 위해 필요한 라이브러리
+    implementation 'net.logstash.logback:logstash-logback-encoder:6.3' 
 }
 
 tasks.named('test') {
