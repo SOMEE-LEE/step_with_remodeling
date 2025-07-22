@@ -19,7 +19,7 @@
         <main id="#container">
             <section class="join_area">
                 <h2>Step With에 회원가입</h2>
-                <form class="join_element">
+                <form class="join_element" autocomplete="off">
                     <div class="phone_check">
                         <!-- 인증번호 전송 안했을 시 알림창은 구현 필요-->
                         <!-- 이미 있는 전화번호 입력했을 때 알림창 구현 필요 -->
@@ -39,7 +39,7 @@
                     </div>
                     <div class="pw_confirm">
                         <!-- 비밀번호 양식에 맞는지 실시간 확인하는 것 구현 필요 -->
-                        <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요." required autocomplete="off"/>
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요." required autocomplete="new-password"/>
                     </div>
                     <div class="name_confirm">
                         <!-- 닉네임 입력 안했을 시 알림창 구현 필요, 양식에 안 맞는 닉네임인지 실시간 확인 필요, -->
