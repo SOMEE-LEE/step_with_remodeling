@@ -51,16 +51,23 @@
         <appender-ref ref="STDOUT"/>
     </appender>
 
-		<!-- Logtrash로 로그 전송 -->
-		<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-      <destination>logstash:5000</destination>
+	<!-- Logtrash로 로그 전송 -->
+	<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+      <destination>43.200.78.115:5000</destination>
       <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+	
+	<!-- Logstash 로그 전송을 비동기 처리: CoolSMS 호출 중 예외가 발생해도 Logstash 연결이 끊기지 않음 -->
+    <appender name="ASYNC_LOGSTASH" class="ch.qos.logback.classic.AsyncAppender">
+      <appender-ref ref="LOGSTASH" />
+      <queueSize>512</queueSize>
+      <discardingThreshold>0</discardingThreshold>
     </appender>
 
 	  <!-- 글로벌 루트 로그 설정 -->
     <root level="INFO"> <!-- 애플리케이션 전체 기본 로그 레벨 설정을 INFO로 설정-->
         <appender-ref ref="ASYNC"/> <!-- 콘솔(터미널) 로그 비동기 처리 -->
         <appender-ref ref="FILE"/>  <!-- 파일 로그 기록(ELK 연동) -->
-        <appender-ref ref="LOGSTASH" />  <!-- Logtrash 로그 기록 -->
+        <appender-ref ref="LOGSTASH" />  <!-- Logstash 로그 기록 -->
     </root>
 </configuration>

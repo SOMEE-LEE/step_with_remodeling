@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // 사용자가 입력한 전화번호로 문자 메시지 전송하는 함수
   $('#sendSms').click(function() {
 	// 전화번호 가져오기(공백 제거)
     const phoneNum = $('#phone').val().trim(); 
@@ -31,5 +32,39 @@ $(document).ready(function() {
 		  }
 		});
 	}
+  });
+  
+  // 사용자가 입력한 인증번호가, 전화번호로 전송한 인증번호와 동일한지 확인하는 함수
+  $('#checkNum').click(function() {
+	  // 입력한 전화번호 가져오기(공백 제거)
+	  const phoneNum = $('#phone').val().trim(); 
+  	  // 입력한 인증번호 가져오기(공백 제거)
+      const num = $('#num').val().trim(); 
+	  
+	  // 전화번호 입력이 안되어있을 경우 ajax 통신을 하지 않고 모달 팝업창을 띄움
+	  if(!phoneNum) {
+	    Modal.alert('전화번호를 입력해주세요.');
+	  // 숫자 길이가 6자리가 아닐 경우 ajax 통신을 하지 않고 모달 팝업창을 띄움
+	  } else if(num.length != 6) {
+		Modal.alert('잘못된 인증번호입니다.');
+	  // 숫자 길이가 6자리고 전화번호가 입력되었을 경우 ajax 통신 시도
+	  } else if(num.length == 6 && phoneNum) {
+        $.ajax({
+          type: 'POST',
+          url: '/sms/verify', // 서버의 엔드포인트
+          data: { 
+            phone: phoneNum,
+            num: num 
+          },
+          success: function(response) {
+            // 인증번호가 같을 경우 모달 팝업창
+            Modal.alert('인증번호가 일치합니다.');
+          },
+          error: function(error) {
+            // 인증번호가 다를 경우 모달 팝업창
+            Modal.alert('인증번호가 일치하지 않습니다.');
+          }
+       });
+     }
   });
 });

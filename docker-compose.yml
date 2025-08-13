@@ -1,3 +1,6 @@
+networks:
+  elk_net:
+    driver: bridge
 
 services:
   elasticsearch:
@@ -7,6 +10,8 @@ services:
       - xpack.security.enabled=false
     ports:
       - "9200:9200"
+    networks:
+      - elk_net
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.12.0
@@ -21,6 +26,11 @@ services:
       - "5000:5000"
     volumes:
       - ./logstash:/usr/share/logstash/pipeline
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk_net
+    restart: on-failure
 
   springboot-app:
     build: .
@@ -28,3 +38,13 @@ services:
       - "8080:8080"
     depends_on:
       - logstash
+    networks:
+      - elk_net
+ 
+  redis:
+     image: redis:alpine
+     container_name: redis
+     ports:
+      - "6379:6379"
+     # 메모리 제한
+     command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru 

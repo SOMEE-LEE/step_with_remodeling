@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-// DTO: 데이터를 운반만 하는 객체(추후 Redis에 추가할 것)
+// DTO: 데이터를 운반만 하는 객체(Redis에 추가됨)
 public class SmsDto {
 	// null 과 "" 과 " " 모두 허용하지 않음
     @NotBlank
