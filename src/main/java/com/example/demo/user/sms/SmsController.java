@@ -42,7 +42,7 @@ public class SmsController {
         smsDto.setCertificationCode(certificationCode);
 
         // 문자 전송 서비스 호출
-        smsService.sendAndSaveSms(smsDto);
+        smsService.sendSms(smsDto);
 
         // 성공 응답 반환
         return ResponseEntity.ok("문자를 전송했습니다.");

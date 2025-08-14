@@ -1,5 +1,7 @@
 package com.example.demo.user.sms;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,11 @@ import com.example.demo.user.SignupPhoneAuthHandler;
 public class SmsServiceImpl implements SmsService {
     private final SignupPhoneAuthHandler authHandler; // SMS 인증 유틸리티 객체
     private final SmsRepository smsRepository; // SMS 레포지토리 객체 (Redis)
+    // Logger 객체 생성: 현재 클래스(SignupPhoneAuthHandler)의 이름을 기반으로 로거를 초기화
+    // 'log'는 이 클래스 내에서 로그 메시지를 출력할 때 사용
+    // SLF4J 인터페이스를 통해 로그백(Logback) 또는 다른 로깅 구현체와 연결
+    // 'private static final'로 선언함으로써 클래스 내에서 한 번만 생성되고 재사용
+    private static final Logger log = LoggerFactory.getLogger(SignupPhoneAuthHandler.class);
 
     // 의존성 주입
     public SmsServiceImpl(@Autowired SignupPhoneAuthHandler authHandler, SmsRepository smsRepository) {
@@ -18,10 +25,24 @@ public class SmsServiceImpl implements SmsService {
     	this.smsRepository = smsRepository;
     }
 
-    @Override  // SmsService 인터페이스 메서드 구현: 메시지 전송과 동시에 Redis에 저장
-    public void sendAndSaveSms(SmsDto smsDto) {
-        authHandler.sendSms(smsDto); // SMS 인증 유틸리티를 사용하여, Handler에서 SMS 발송
-        smsRepository.saveSmsCertification(smsDto); // 인증 코드를 Redis에 저장
+    @Override  // SmsService 인터페이스 메서드 구현: 메시지 전송
+    public void sendSms(SmsDto smsDto) {
+        try {
+            authHandler.sendSms(smsDto); // SMS 인증 유틸리티를 사용하여, Handler에서 SMS 발송
+            saveSms(smsDto);             // 성공했으니 전화번호와 인증번호 저장
+        } catch (RuntimeException e) {
+            // 실패 처리: 로그 남기기, 사용자에게 알림 등
+            log.error("SMS 전송 실패: {}", e.getMessage());
+            throw new RuntimeException("SMS 전송에 실패했습니다.");
+        }
+    }
+    
+    @Override // SmsService 인터페이스 메서드 구현: 전송한 메시지에 대한 전화번호와 인증번호 저장
+    public void saveSms(SmsDto smsDto) {
+    	// 전화번호와 인증 번호를 Redis에 저장
+        if (!smsRepository.saveSmsCertification(smsDto)) {
+            throw new RuntimeException("SMS 인증 정보 저장 실패");
+        }
     }
 
 	@Override  // SmsService 인터페이스 메서드 구현: 인증번호 확인
