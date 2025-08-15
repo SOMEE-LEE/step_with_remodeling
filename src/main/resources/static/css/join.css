@@ -68,6 +68,11 @@ button:hover {
     color: #fff;
 }
 
+button:disabled {
+    background: var(--line-color);
+    color: var(--txt-color-600);
+}
+
 #modal_require,
 #modal_personal,
 #modal_ad {

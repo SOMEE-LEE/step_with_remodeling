@@ -1,3 +1,4 @@
+// user_join.js
 $(document).ready(function() {
   // 사용자가 입력한 전화번호로 문자 메시지 전송하는 함수
   $('#sendSms').click(function() {
@@ -57,6 +58,9 @@ $(document).ready(function() {
             num: num 
           },
           success: function(response) {
+			// 인증번호가 같을 경우 버튼 ui 변경
+			$('#checkNum').text("인증확인 완료").prop("disabled", true);
+			$('#sendSms').text("인증확인 완료").prop("disabled", true);
             // 인증번호가 같을 경우 모달 팝업창
             Modal.alert('인증번호가 일치합니다.');
           },
