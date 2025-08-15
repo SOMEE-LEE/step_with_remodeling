@@ -1,4 +1,4 @@
-package com.example.demo.user.sms;
+package com.example.demo.config;
 
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.context.annotation.Bean;

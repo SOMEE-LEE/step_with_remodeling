@@ -1,4 +1,4 @@
-package com.example.demo.user.sms;
+package com.example.demo.sms;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;

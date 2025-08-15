@@ -1,4 +1,4 @@
-package com.example.demo.user.sms;
+package com.example.demo.sms;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
