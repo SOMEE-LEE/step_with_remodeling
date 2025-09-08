@@ -71,4 +71,57 @@ $(document).ready(function() {
        });
      }
   });
+  
+  // 사용자가 입력한 닉네임 유효성 검사 함수
+  $('#checkNickname').click(function() {
+    // 입력한 닉네임 가져오기
+    const userName = $('#name').val();
+	// 닉네임 형식 유효성 검사 (2~7자, 한글/영문/숫자만 허용)
+	const nicknameRegex = /^[가-힣a-zA-Z0-9]{2,7}$/;
+	
+    // 닉네임 입력 안 했을 경우
+    if (userName === '') {
+      Modal.alert('닉네임을 입력해주세요.');
+      return;
+    } else if (!nicknameRegex.test(userName)) {
+        Modal.alert('닉네임은 2~7자의 한글/영문/숫자만 사용할 수 있으며,<br>띄어쓰기는 불가능합니다.');
+        return;
+    } else {
+		// 닉네임 중복 확인
+		 $.ajax({
+		   type: 'POST',
+		   url: '/users/signup/check_id', // 서버 엔드포인트
+		   data: { 
+		     userName: userName,
+		   },
+		   success: function(response) {
+		    // response가 true면 모달 팝업창
+			if (response === true|| response === 'true') {
+		      Modal.alert('중복 닉네임입니다.');
+			// response가 false일 시 이벤트
+			} else if (response === false || response === 'false') {
+		      // 모달 팝업창(커스텀이라 y/n 설정 가능)
+			  Modal.confirm('중복 닉네임이 없습니다. 이 닉네임을 사용하시겠습니까?',
+			    function () {
+			      // 버튼 UI 변경
+			       $('#checkNickname').text('중복확인 완료').prop('disabled', true);
+				   // 닉네임 입력창을 readonly로 변경(disabled 상태에서는 폼 제출 시 해당 값이 전송되지 않음)
+				   $('#name').prop('readonly', true);
+				   // 닉네임 입력창 포커스 제거
+				   $('#name').blur(); 
+			    },
+			    function () {
+			      // 아니오: 아무것도 안 함 (재전송 가능)
+			    }
+		      );
+			}
+		  },
+		  error: function(error) {
+		    // 뭐가 안 될 경우: error 출력
+		    console.error('닉네임 중복 확인 중 오류 발생:', error);
+		    Modal.alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+		  }
+		 });
+	}
+  });
 });
