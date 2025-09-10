@@ -8,4 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<User, String> {
 	// 해당 사용자 이름을 가진 행이 존재하는지 boolean으로 반환
 	boolean existsByUserName(String userName);
+	
+	// 해당 휴대폰 번호를 가진 행이 존재하는지 boolean으로 반환
+	boolean existsByPhone(String phone);
 }

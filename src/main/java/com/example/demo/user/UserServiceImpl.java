@@ -15,9 +15,16 @@ public class UserServiceImpl implements UserService {
     }
 
     // 사용자 이름이 중복되는지 확인하는 메서드
-    // UserRepository의 existsByUsername 메서드를 호출하여 boolean 값 반환
+    // UserRepository의 existsByUserName 메서드를 호출하여 boolean 값 반환
     @Override
-    public boolean isUsernameDuplicate(String userName) {
+    public boolean isUserNameDuplicate(String userName) {
         return userRepository.existsByUserName(userName);
     }
+
+    // 사용자 휴대폰 번호가 중복되는지 확인하는 메서드
+    // UserRepository의 existsByPhone 메서드를 호출하여 boolean 값 반환
+	@Override
+	public boolean isPhoneDuplicate(String phone) {
+		return userRepository.existsByPhone(phone);
+	}
 }

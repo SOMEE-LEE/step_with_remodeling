@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users") // "/users" 경로로 들어오는 요청을 처리
 public class UserController {
 	
-    // UserService를 주입바기 위한 필드 선언: final 키워드로 불변성 유지 
+    // UserService를 주입받기 위한 필드 선언: final 키워드로 불변성 유지 
 	private final UserService userService;
 	
     // 생성자를 통해 UserService를 자동 주입(생성자 주입 방식: 테스트 용이, 순환 참조 방지, 불변성 확보)
@@ -22,8 +22,15 @@ public class UserController {
 	
     // ID 중복확인 요청
     @PostMapping("/signup/check_id")
-    public ResponseEntity<Boolean> checkUsername(@RequestParam("userName") String userName) {
-        boolean isDuplicate = userService.isUsernameDuplicate(userName);
+    public ResponseEntity<Boolean> checkUserName(@RequestParam("userName") String userName) {
+        boolean isDuplicate = userService.isUserNameDuplicate(userName);
         return ResponseEntity.ok(isDuplicate);
+    }
+    
+    // 휴대폰 번호 중복확인 요청
+    @PostMapping("/signup/check_phone")
+    public ResponseEntity<Boolean> checkPhone(@RequestParam("phone") String phone) {
+    	boolean isDuplicate = userService.isPhoneDuplicate(phone);
+    	return ResponseEntity.ok(isDuplicate);
     }
 }

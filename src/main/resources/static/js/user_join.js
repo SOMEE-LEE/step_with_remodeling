@@ -19,17 +19,40 @@ $(document).ready(function() {
 	} else {
 		// 유효한 전화번호일 경우 ajax 통신
 		// -> 페이지를 새로고침하지 않고도 필요한 데이터만 비동기적으로 주고받을 수 있음
+		// DB에 저장된 번호인지 확인
 		$.ajax({
 		  type: 'POST',
-		  url: '/sms/send', // 서버의 엔드포인트
-		  data: { phone: phoneNum },
+		  url: '/users/signup/check_phone', // 서버 엔드포인트
+		  data: { phone : phoneNum},
 		  success: function(response) {
-			// alert창 대신 커스텀 모달 팝업창 추가
-			Modal.alert('인증번호가 전송되었습니다.');
-		  },
+			// response가 true면 모달 팝업창
+			if (response === true|| response === 'true') {
+			     Modal.alert('중복 휴대전화번호 입니다.');
+			// response가 false일 시에만 ajax 통신
+			} else if (response === false || response === 'false') {
+				// DB에 저장되지 않은 번호일 경우 문자 메시지 전송
+				$.ajax({
+				  type: 'POST',
+				  url: '/sms/send', // 서버의 엔드포인트
+				  data: { phone: phoneNum },
+				  success: function(response) {
+					// alert창 대신 커스텀 모달 팝업창 추가
+					Modal.alert('인증번호가 전송되었습니다.');
+				  },
+				  error: function(error) {
+					// alert창 대신 커스텀 모달 팝업창 추가
+					Modal.alert('인증번호 전송에 실패했습니다.');
+					// 콘솔에 error 출력
+					console.error('인증번호 전송 중 오류 발생:', error);
+				  }
+				});
+			}
+		  }, 
 		  error: function(error) {
-			// alert창 대신 커스텀 모달 팝업창 추가
-			Modal.alert('인증번호 전송에 실패했습니다.');
+			// 오류 발생 시 커스텀 모달 팝업창
+			Modal.alert('휴대전화번호 중복 확인에 실패했습니다.');
+			// 콘솔에 error 출력
+			console.error('휴대전화번호 중복 확인 중 오류 발생:', error);
 		  }
 		});
 	}
@@ -61,12 +84,20 @@ $(document).ready(function() {
 			// 인증번호가 같을 경우 버튼 ui 변경
 			$('#checkNum').text("인증확인 완료").prop("disabled", true);
 			$('#sendSms').text("인증확인 완료").prop("disabled", true);
+			// 휴대폰번호 입력창을 readonly로 변경 및 포커스 제거(disabled 상태에서는 폼 제출 시 해당 값이 전송되지 않음)
+			$('#phone').prop('readonly', true);
+			$('#phone').blur(); 
+			// 인증번호 입력창을 readonly로 변경 및 포커스 제거(disabled 상태에서는 폼 제출 시 해당 값이 전송되지 않음)
+			$('#num').prop('readonly', true);
+			$('#num').blur(); 
             // 인증번호가 같을 경우 모달 팝업창
             Modal.alert('인증번호가 일치합니다.');
           },
           error: function(error) {
             // 인증번호가 다를 경우 모달 팝업창
             Modal.alert('인증번호가 일치하지 않습니다.');
+			// 콘솔에 error 출력
+			console.error('인증번호 확인 중 오류 발생:', error);
           }
        });
      }
@@ -117,9 +148,9 @@ $(document).ready(function() {
 			}
 		  },
 		  error: function(error) {
-		    // 뭐가 안 될 경우: error 출력
-		    console.error('닉네임 중복 확인 중 오류 발생:', error);
-		    Modal.alert('서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+		    // 모달 팝업창 및 error 출력
+		    Modal.alert('닉네임 중복 확인 중 오류가 발생했습니다.');
+			console.error('닉네임 중복 확인 중 오류 발생:', error);
 		  }
 		 });
 	}
