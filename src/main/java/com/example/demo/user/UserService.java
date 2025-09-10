@@ -7,4 +7,7 @@ public interface UserService {
 	
 	// 해당 휴대폰 번호를 가진 행이 존재하는지 확인
 	boolean isPhoneDuplicate(String phone);
+	
+	// 해당 아이디를 가진 행이 존재하는지 확인
+	boolean isIdDuplicate(String id);
 }

@@ -20,8 +20,8 @@ public class UserController {
     	this.userService = userService;
     }
 	
-    // ID 중복확인 요청
-    @PostMapping("/signup/check_id")
+    // 닉네임 중복확인 요청
+    @PostMapping("/signup/check_name")
     public ResponseEntity<Boolean> checkUserName(@RequestParam("userName") String userName) {
         boolean isDuplicate = userService.isUserNameDuplicate(userName);
         return ResponseEntity.ok(isDuplicate);
@@ -32,5 +32,12 @@ public class UserController {
     public ResponseEntity<Boolean> checkPhone(@RequestParam("phone") String phone) {
     	boolean isDuplicate = userService.isPhoneDuplicate(phone);
     	return ResponseEntity.ok(isDuplicate);
+    }
+    
+    // ID 중복확인 요청
+    @PostMapping("/signup/check_id")
+    public ResponseEntity<Boolean> checkId(@RequestParam("id") String id) {
+        boolean isDuplicate = userService.isIdDuplicate(id);
+        return ResponseEntity.ok(isDuplicate);
     }
 }

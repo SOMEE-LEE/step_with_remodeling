@@ -11,4 +11,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 	
 	// 해당 휴대폰 번호를 가진 행이 존재하는지 boolean으로 반환
 	boolean existsByPhone(String phone);
+	
+	// 해당 아이디를 가진 행이 존재하는지 boolean으로 반환
+	boolean existsById(String id);
 }
