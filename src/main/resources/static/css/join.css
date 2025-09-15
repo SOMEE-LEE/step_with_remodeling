@@ -26,6 +26,10 @@ main {
     padding-bottom: 25px;
 }
 
+.join_area p {
+	font-size: 1.3rem;
+}
+
 .join_element {
     display: flex;
     flex-direction: column;

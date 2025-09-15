@@ -1,11 +1,19 @@
 // user_join.js
 $(document).ready(function() {
+  $('#pwMessage').hide();  
+  $('#pwMessage').text('');
+  
+  // 비밀번호 입력 필드의 값이 변경될 때마다 pwCheck 함수 호출
+  $('#pw').on('input', function() {
+      pwCheck();
+  });
+
   // 사용자가 입력한 전화번호로 문자 메시지 전송하는 함수
   $('#sendSms').click(function() {
 	// 전화번호 가져오기(공백 제거)
     const phoneNum = $('#phone').val().trim(); 
 	// 전화번호 유효성 검증 정규식
-	var regPhone = /^01[016789][0-9]{3,4}[0-9]{4}$/;
+	const regPhone = /^01[016789][0-9]{3,4}[0-9]{4}$/;
 	
 	// 전화번호를 입력하지 않았을 때
 	if (!phoneNum) {
@@ -108,13 +116,13 @@ $(document).ready(function() {
     // 입력한 닉네임 가져오기
     const userName = $('#name').val();
 	// 닉네임 형식 유효성 검사 (2~7자, 한글/영문/숫자만 허용)
-	const nicknameRegex = /^[가-힣a-zA-Z0-9]{2,7}$/;
+	const regNickname = /^[가-힣a-zA-Z0-9]{2,7}$/;
 	
     // 닉네임 입력 안 했을 경우
     if (userName === '') {
       Modal.alert('닉네임을 입력해주세요.');
       return;
-    } else if (!nicknameRegex.test(userName)) {
+    } else if (!regNickname.test(userName)) {
         Modal.alert('닉네임은 2~7자의 한글/영문/숫자만 사용할 수 있으며,<br>띄어쓰기는 불가능합니다.');
         return;
     } else {
@@ -161,13 +169,13 @@ $(document).ready(function() {
     // 입력한 아이디 가져오기
     const id = $('#id').val();
     // 아이디 유효성 검사 (5~12, 영어와 숫자와 특수문자만 사용 가능, 띄어쓰기 사용 불가능)
-    const idRegex = /^[a-zA-Z0-9!@#$%^&*]{5,12}$/;
+    const regId = /^[a-zA-Z0-9!@#$%^&*]{5,12}$/;
 
     // 아이디 입력 안 했을 경우
     if (id === '') {
       Modal.alert('아이디를 입력해주세요.');
       return;
-    } else if (!idRegex.test(id)) {
+    } else if (!regId.test(id)) {
         Modal.alert('아이디에는 5~12자 영어/숫자/특수문자만 사용할 수 있으며,<br> 띄어쓰기는 불가능합니다.');
         return;
     } else {
@@ -208,4 +216,25 @@ $(document).ready(function() {
   	 });
     }
   });
+  
+  // 비밀번호 유효성 검사
+  function pwCheck() {
+    // 비밀번호 값 가져오기
+    const pw = $('#pw').val();
+    // 비밀번호 유효성 검증 정규식: 최소 6자에서 16자까지 쓸 수 있으며, 영어 소문자, 대문자, 숫자, 특수문자가 모두 포함되어야 함
+	const regPw = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,16}$/;
+    
+    // 비밀번호가 빈 칸이 아닐 때만 유효성 검사 실행
+    if (pw != "") {
+      if (!regPw.test(pw)) {
+        $('#pwMessage').show(); 
+        $('#pwMessage').html('비밀번호는 최소 6자에서 16자까지 쓸 수 있으며,<br>영어 소문자, 대문자, 숫자, 특수문자가 모두 포함되어야 합니다.');
+        $('#pwMessage').css('color', 'red');
+      } else {
+        $('#pwMessage').show(); 
+  	      $('#pwMessage').html('사용 가능한 비밀번호입니다.');
+  	      $('#pwMessage').css('color', 'black');
+      }
+    }
+  }
 });
