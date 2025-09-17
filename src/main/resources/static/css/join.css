@@ -40,15 +40,16 @@ main {
 .phone_check,
 .phone_confirm,
 .id_confirm,
-.name_confirm {
-    display: flex;
-    gap: 0 10px;
-}
-
+.name_confirm,
 .pw_confirm {
     display: flex;
     flex-direction: column;
-    gap: 15px 0;
+}
+
+.check,
+.confirm {
+    display: flex;
+    gap: 0 10px;	
 }
 
 #phone:focus,
@@ -75,6 +76,12 @@ button:hover {
 button:disabled {
     background: var(--line-color);
     color: var(--txt-color-600);
+}
+
+.btn_confirmed {
+	background-color: var(--point-color3);
+	color: #fff;
+    cursor: default;
 }
 
 #modal_require,
