@@ -13,8 +13,6 @@ import net.nurigo.sdk.message.model.Message;
 import net.nurigo.sdk.message.service.DefaultMessageService;
 
 
-
-
 // 해당 클래스를 Spring의 컨테이너에 Bean으로 등록하고 관리하게 함
 @Component
 public class SignupPhoneAuthHandler {
@@ -53,7 +51,8 @@ public class SignupPhoneAuthHandler {
 	    // 수신자 번호 설정
 	    message.setTo(smsDto.getToNumber());
 	    // 메시지 내용 설정(인증번호 6자리: 랜덤생성)
-	    message.setText("[스텝 위드 Step With] 본인확인 인증번호 ["+smsDto.getCertificationCode()+"]를 입력해 주세요.");
+	    message.setText("[스텝 위드 Step With] 본인확인 인증번호 ["+smsDto.getCertificationCode()+"]를 입력해 주세요. "
+	    		+ "\n본인의 요청이 아닐 경우, 문의하기 페이지를 이용해주세요: https://stepwith.com/support");
 
 	    try {
 	    	// 메시지 발송 요청
