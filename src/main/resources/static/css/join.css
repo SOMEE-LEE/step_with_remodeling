@@ -157,6 +157,7 @@ input[type='submit'] {
 .modal_content button {
     background: var(--point-color1);
     color: #fff;
+    display: block;
 }
 
 th {

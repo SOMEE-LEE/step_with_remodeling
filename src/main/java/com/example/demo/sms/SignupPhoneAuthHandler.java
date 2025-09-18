@@ -52,7 +52,7 @@ public class SignupPhoneAuthHandler {
 	    message.setTo(smsDto.getToNumber());
 	    // 메시지 내용 설정(인증번호 6자리: 랜덤생성)
 	    message.setText("[스텝 위드 Step With] 본인확인 인증번호 ["+smsDto.getCertificationCode()+"]를 입력해 주세요. "
-	    		+ "\n본인의 요청이 아닐 경우, 문의하기 페이지를 이용해주세요: https://stepwith.com/support");
+	    		+ "\n\n본인의 요청이 아닐 경우, 문의하기 페이지를 이용해주세요: https://stepwith.com/support");
 
 	    try {
 	    	// 메시지 발송 요청

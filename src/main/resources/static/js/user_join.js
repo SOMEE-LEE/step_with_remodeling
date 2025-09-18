@@ -304,4 +304,45 @@ $(document).ready(function() {
 		$('#checkNum').prop('disabled', !regNum.test(num));
 	}
   }
+  
+	// 회원가입 버튼 클릭 시 이벤트
+	$('#join_btn').on('click', function(e) {
+		e.preventDefault(); // 기본 submit 이벤트 막기
+		
+		const sendSms = $('#sendSms').hasClass('btn_confirmed');
+		const checkNum = $('#checkNum').hasClass('btn_confirmed');
+		const checkId = $('#checkId').hasClass('btn_confirmed');
+		const checkNickname = $('#checkNickname').hasClass('btn_confirmed');
+		const color = $('#pwMessage').css('color');
+		
+		// btn_confirmed 클래스가 없는 버튼이 하나라도 있는지, 유효성 검사 메시지 색상이 검은색이 아닌지 확인
+		if (!sendSms || !checkNum || !checkId || color !== 'rgb(0, 0, 0)' || !checkNickname) {
+			// 어떤 항목이 부족한지 모달창으로 안내하고 관련 input에 포커스
+			if(!sendSms) {
+				Modal.alert('인증번호 전송을 먼저 진행해주세요.', () => {
+				  $('#phone').focus();
+				}); 
+			} else if(!checkNum) {
+				Modal.alert('인증번호 확인을 먼저 진행해주세요.', () => {
+				  $('#num').focus();  // 모달이 닫힌 후 콜백으로 포커스 주기
+				}); 
+			} else if(!checkId) {
+				Modal.alert('아이디 중복 확인을 먼저 진행해주세요.', () => {
+				  $('#id').focus();  // 모달이 닫힌 후 콜백으로 포커스 주기
+				});
+			} else if (color !== 'rgb(0, 0, 0)') {
+				Modal.alert('비밀번호 양식을 확인해주세요.', () => {
+				  $('#pw').focus();  // 모달이 닫힌 후 콜백으로 포커스 주기
+				});
+			} else if(!checkNickname) {
+				Modal.alert('닉네임 중복 확인을 먼저 진행해주세요.', () => {
+				  $('#name').focus();  // 모달이 닫힌 후 콜백으로 포커스 주기
+				});
+			} 
+			return false;
+		}
+
+		// 모든 확인 완료 → submit 허용
+		$('#join_btn').closest('form')[0].submit();
+	});
 });
