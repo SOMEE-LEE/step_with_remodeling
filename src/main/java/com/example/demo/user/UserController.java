@@ -40,4 +40,17 @@ public class UserController {
         boolean isDuplicate = userService.isIdDuplicate(id);
         return ResponseEntity.ok(isDuplicate);
     }
+    
+    // 회원가입 요청
+    @PostMapping("/signup")
+    public ResponseEntity<Boolean> join(    
+    		@RequestParam String id,
+    	    @RequestParam String pw,
+    	    @RequestParam String phone,
+    	    @RequestParam String userName,
+    	    @RequestParam boolean adAgree) {
+    	User user = new User(id,pw, phone, userName, adAgree);
+    	boolean isSignedUp = userService.isSignedUp(user);
+    	return ResponseEntity.ok(isSignedUp);
+    }
 }

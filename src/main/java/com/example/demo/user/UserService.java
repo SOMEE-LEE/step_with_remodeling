@@ -10,4 +10,7 @@ public interface UserService {
 	
 	// 해당 아이디를 가진 행이 존재하는지 확인
 	boolean isIdDuplicate(String id);
+
+	// 회원가입 성공했는지 확인
+	boolean isSignedUp(User user);
 }

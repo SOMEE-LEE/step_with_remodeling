@@ -1,10 +1,13 @@
 package com.example.demo.user;
 
 
+import com.example.demo.BaseEntity;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +28,7 @@ import lombok.ToString;
 @ToString
 //엔티티가 매핑될 테이블 이름을 명시적으로 지정 (기본값은 클래스 이름)
 @Table(name="user")
-public class User {
+public class User extends BaseEntity {  // BaseEntity의 생성 일자와 수정 일자 상속
 	// 기본 키(PK)로 지정된 필드. 데이터베이스의 고유 식별자 역할
     @Id
 	private String id;
@@ -42,7 +45,7 @@ public class User {
     @NotBlank
     private String userName;
     
-    // 광고수신 동의 여부: null 과 "" 과 " " 모두 허용하지 않음
-    @NotBlank
+    // 광고수신 동의 여부: NotBlank는 Boolean 타입엔 적용되지 않음
+    @NotNull
     private boolean adAgree;
 }

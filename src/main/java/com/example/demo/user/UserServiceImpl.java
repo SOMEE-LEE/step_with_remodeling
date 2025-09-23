@@ -2,6 +2,8 @@ package com.example.demo.user;
 
 import org.springframework.stereotype.Service;
 
+import jakarta.transaction.Transactional;
+
 
 // UserService의 실제 로직을 작성
 @Service
@@ -33,5 +35,18 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean isIdDuplicate(String id) {
 		return userRepository.existsById(id);
+	}
+
+	// 사용자 회원가입이 성공했는지 확인하는 메서드
+	@Override
+	@Transactional  // JPA에서 save(), delete(), update() 같은 DB 변경 작업은 트랜잭션 안에서 실행되어야만 실제로 반영
+	public boolean isSignedUp(User user) {
+	    try {
+	        userRepository.save(user);
+	        return true;
+	    } catch (Exception e) {
+	    	System.out.println(e.getStackTrace());
+	        return false;
+	    }
 	}
 }

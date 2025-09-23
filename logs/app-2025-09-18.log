@@ -1,0 +1,264 @@
+2025-09-18 18:00:52.517 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 7008 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 18:00:52.525 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 18:00:53.591 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:00:53.592 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:00:53.655 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:00:54.792 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:00:54.797 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 18:00:55.093 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 288 ms. Found 1 JPA repository interface.
+2025-09-18 18:00:55.110 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:00:55.111 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:00:55.144 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 18:00:55.145 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:00:55.941 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 18:00:56.042 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 18:00:56.109 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 18:00:56.662 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 18:00:56.731 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 18:00:57.394 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46067a74
+2025-09-18 18:00:57.397 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 18:00:57.480 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 18:00:57.482 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 18:00:57.536 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 18:00:58.974 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 18:00:59.087 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:01:00.491 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 18:01:00.547 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 623afa07-ecbd-4326-b044-9ecb02b270e1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 18:01:00.560 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 18:01:01.391 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 18:01:02.144 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 10.527 seconds (process running for 12.365)
+2025-09-18 18:01:03.119 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:01:03.123 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 18:01:03.143 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-18 18:43:37.117 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 12260 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 18:43:37.127 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 18:43:38.954 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:43:38.956 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:43:39.028 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:43:40.797 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:43:40.802 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 18:43:41.286 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 468 ms. Found 1 JPA repository interface.
+2025-09-18 18:43:41.306 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:43:41.308 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:43:41.337 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 18:43:41.339 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:43:42.824 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 18:43:42.992 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 18:43:43.107 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 18:43:44.059 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 18:43:44.133 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 18:43:45.128 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d26c6a2
+2025-09-18 18:43:45.128 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 18:43:45.212 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 18:43:45.214 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 18:43:45.299 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 18:43:48.005 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 18:43:48.161 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:43:50.624 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 18:43:50.754 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 27c8cd52-5462-4869-8eb1-6a05ae3a33b6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 18:43:50.792 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 18:43:52.372 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 18:43:53.587 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 17.62 seconds (process running for 19.617)
+2025-09-18 18:43:55.020 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:43:55.037 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 18:43:55.050 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-18 18:45:33.620 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 14616 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 18:45:33.626 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 18:45:35.555 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:45:35.558 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:45:35.632 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:45:37.226 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:45:37.233 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 18:45:37.757 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 508 ms. Found 1 JPA repository interface.
+2025-09-18 18:45:37.785 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:45:37.785 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:45:37.820 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 18:45:37.820 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:45:39.492 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 18:45:39.685 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 18:45:39.850 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 18:45:40.781 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 18:45:40.884 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 18:45:41.754 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37a36194
+2025-09-18 18:45:41.762 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 18:45:41.892 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 18:45:41.904 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 18:45:41.972 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 18:45:44.367 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 18:45:44.471 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:45:46.635 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 18:45:46.716 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 418e688a-c606-4e05-9a90-b29a917c1da6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 18:45:46.738 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 18:45:48.053 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 18:45:48.954 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 17.142 seconds (process running for 19.664)
+2025-09-18 18:45:50.249 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:45:50.254 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 18:45:50.274 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-18 18:51:09.663 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 21732 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 18:51:09.667 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 18:51:11.405 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:51:11.410 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:51:11.487 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:51:13.287 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:51:13.289 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 18:51:13.683 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 379 ms. Found 1 JPA repository interface.
+2025-09-18 18:51:13.693 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:51:13.693 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:51:13.737 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 18:51:13.739 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:51:15.336 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 18:51:15.483 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 18:51:15.641 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 18:51:16.625 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 18:51:16.733 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 18:51:17.651 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55a29589
+2025-09-18 18:51:17.658 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 18:51:17.957 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 18:51:17.963 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 18:51:18.026 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 18:51:20.761 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 18:51:20.954 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:51:23.616 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 18:51:23.722 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 374fbfe2-6558-4495-b6b4-63e7fafca33f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 18:51:23.758 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 18:51:25.099 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 18:51:26.076 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 17.57 seconds (process running for 19.514)
+2025-09-18 18:51:27.342 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:51:27.348 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 18:51:27.372 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-18 18:55:41.346 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 3252 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 18:55:41.348 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 18:55:43.272 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:55:43.274 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:55:43.332 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:55:45.133 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:55:45.133 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 18:55:45.561 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 407 ms. Found 1 JPA repository interface.
+2025-09-18 18:55:45.587 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 18:55:45.587 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 18:55:45.609 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 18:55:45.609 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2025-09-18 18:55:47.160 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 18:55:47.331 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 18:55:47.459 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 18:55:48.328 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 18:55:48.426 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 18:55:49.549 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37a36194
+2025-09-18 18:55:49.550 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 18:55:49.677 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 18:55:49.692 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 18:55:49.781 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 18:55:52.575 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 18:55:52.711 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:55:55.138 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 18:55:55.231 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 4ead7619-e04e-48a4-b98a-f9a4f7d0ada4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 18:55:55.257 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 18:55:56.845 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 18:55:57.853 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 17.432 seconds (process running for 19.448)
+2025-09-18 18:55:58.997 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 18:55:59.008 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 18:55:59.024 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-09-18 19:02:24.948 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Starting StepWithRemodelingApplicationTests using Java 17.0.2 with PID 22188 (started by somee in C:\sts\workspace\step_with_remodeling)
+2025-09-18 19:02:24.957 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-18 19:02:26.410 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 19:02:26.410 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 19:02:26.491 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2025-09-18 19:02:28.553 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 19:02:28.553 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-18 19:02:29.013 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 452 ms. Found 1 JPA repository interface.
+2025-09-18 19:02:29.045 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-09-18 19:02:29.045 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-09-18 19:02:29.077 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.demo.user.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-09-18 19:02:29.077 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2025-09-18 19:02:30.454 [Test worker] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-18 19:02:30.676 [Test worker] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-09-18 19:02:30.801 [Test worker] [INFO] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-09-18 19:02:31.790 [Test worker] [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-18 19:02:31.900 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2025-09-18 19:02:32.792 [Test worker] [INFO] c.z.h.p.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68303aad
+2025-09-18 19:02:32.807 [Test worker] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2025-09-18 19:02:33.015 [Test worker] [WARN] o.h.o.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-18 19:02:33.032 [Test worker] [WARN] o.h.o.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-18 19:02:33.128 [Test worker] [INFO] o.h.o.c.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-18 19:02:35.502 [Test worker] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-18 19:02:35.661 [Test worker] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 19:02:37.922 [Test worker] [WARN] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-18 19:02:38.018 [Test worker] [WARN] o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 30301ef4-9f72-4d27-87a4-7bf6da92f993
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-18 19:02:38.039 [Test worker] [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-18 19:02:39.241 [Test worker] [INFO] o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-18 19:02:40.154 [Test worker] [INFO] c.e.d.StepWithRemodelingApplicationTests - Started StepWithRemodelingApplicationTests in 16.039 seconds (process running for 17.962)
+2025-09-18 19:02:41.317 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-18 19:02:41.332 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-18 19:02:41.360 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

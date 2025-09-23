@@ -341,8 +341,36 @@ $(document).ready(function() {
 			} 
 			return false;
 		}
-
-		// 모든 확인 완료 → submit 허용
-		$('#join_btn').closest('form')[0].submit();
+		
+		// 유효성 통과 → 폼 제출 트리거
+		$('#join_form').submit();
+	});
+	
+	// 회원가입 폼 제출 로직
+	$('#join_form').on('submit', function(e) {
+	  e.preventDefault(); // 기본 제출 막기
+		
+	  // AJAX 요청 실행
+	  $.ajax({
+	    url: '/users/signup',
+	    method: 'POST',
+	    data: {
+	      id: $('#id').val(),
+	      pw: $('#pw').val(),
+	      userName: $('#name').val(),
+	      phone: $('#phone').val(),
+	      email: $('#email').val(),
+	      nickname: $('#nickname').val(),
+	      adAgree: $('#ad').is(':checked')
+	    },
+	    success: function(response) {
+	      Modal.alert('회원가입이 완료되었습니다!<br>자동 로그인 후 메인페이지로 이동합니다.');
+		  console.log(response);
+	    },
+	    error: function(err) {
+	      Modal.alert('회원가입 중 오류가 발생했습니다.');
+	      console.error('회원가입 중 오류 발생:', err);
+	    }
+	  });
 	});
 });
