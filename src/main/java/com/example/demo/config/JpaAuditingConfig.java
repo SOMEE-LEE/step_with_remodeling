@@ -11,6 +11,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @Configuration 
 //JPA Auditing 기능을 활성화하기 위한 어노테이션: 엔티티의 생성일자, 수정일자 등을 자동으로 관리
 @EnableJpaAuditing 
-public class JpaAuditingConfiguration {
+public class JpaAuditingConfig {
     // 현재는 별도의 설정이 없지만, 필요 시 AuditorAware 등을 정의
 }

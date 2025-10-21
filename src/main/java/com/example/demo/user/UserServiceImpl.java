@@ -1,5 +1,7 @@
 package com.example.demo.user;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 import jakarta.transaction.Transactional;
@@ -48,5 +50,11 @@ public class UserServiceImpl implements UserService {
 	    	System.out.println(e.getStackTrace());
 	        return false;
 	    }
+	}
+
+	// 해당 아이디를 가진 사용자를 가져오는 메서드
+	@Override
+	public Optional<User> getUserById(String id) {
+		return userRepository.findById(id);
 	}
 }
