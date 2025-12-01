@@ -26,6 +26,10 @@ main {
     padding-bottom: 25px;
 }
 
+.join_area p {
+	font-size: 1.3rem;
+}
+
 .join_element {
     display: flex;
     flex-direction: column;
@@ -36,15 +40,16 @@ main {
 .phone_check,
 .phone_confirm,
 .id_confirm,
-.name_confirm {
-    display: flex;
-    gap: 0 10px;
-}
-
+.name_confirm,
 .pw_confirm {
     display: flex;
     flex-direction: column;
-    gap: 15px 0;
+}
+
+.check,
+.confirm {
+    display: flex;
+    gap: 0 10px;	
 }
 
 #phone:focus,
@@ -66,6 +71,17 @@ button {
 button:hover {
     background: var(--point-color1);
     color: #fff;
+}
+
+button:disabled {
+    background: var(--line-color);
+    color: var(--txt-color-600);
+}
+
+.btn_confirmed {
+	background-color: var(--point-color3);
+	color: #fff;
+    cursor: default;
 }
 
 #modal_require,
@@ -141,6 +157,7 @@ input[type='submit'] {
 .modal_content button {
     background: var(--point-color1);
     color: #fff;
+    display: block;
 }
 
 th {

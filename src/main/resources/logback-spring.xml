@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	  <!-- 로그 파일이 저장될 경로 변수 (/logs) -->
+    <property
+            name="LOG_PATH"
+            value="logs"
+    />
+
+    <!-- 파일 로그 출력 패턴: 색상 없이 정형화된 포맷. ELK에 파싱하기 좋음 (ELK 연동용) -->
+    <property
+            name="FILE_PATTERN"
+            value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%-3level] %logger{5} - %msg%n"
+    />
+
+    <!-- ==========================
+        로그 파일 설정 (ELK 연동용)
+        ========================== -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">  <!-- RollingFileAppender: 날짜별로 로그 파일 자동으로 분할 생성 -->
+        <file>${LOG_PATH}/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/app-%d{yyyy-MM-dd}.log</fileNamePattern>	<!-- (app-2025-06-28.log와 같은 형식으로 파일 이름 지정 -->
+            <maxHistory>10</maxHistory>  <!-- : 10일치까지만 파일 보관(자동 삭제) -->
+        </rollingPolicy>
+        <encoder>	<!-- ELK 연동 전용 로그 포맷 -->
+            <Pattern>${FILE_PATTERN}</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- 콘솔(터미널)에 출력할 때 사용할 패턴 (색상 적용) -->
+    <property
+            name="CONSOLE_PATTERN"
+            value="%d{yyyy-MM-dd HH:mm:ss.SSS} %magenta([%thread]) %highlight([%-3level]) %logger{5} - %msg %n"
+    />
+
+    <!-- 터미널에 출력하는 Appender 설정 - 개발 환경 전용 -->
+    <appender
+            name="STDOUT"
+            class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>${CONSOLE_PATTERN}</Pattern>
+        </encoder>
+    </appender>
+
+    <!-- 콘솔 로그 비동기 처리(성능 최적화, 버퍼링)
+          아래 ASYNC는 위 STDOUT 출력을 비동기로 최적화(성능 향상) -->
+
+    <appender
+            name="ASYNC"
+            class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="STDOUT"/>
+    </appender>
+
+	<!-- Logtrash로 로그 전송 -->
+	<appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+      <destination>43.200.78.115:5000</destination>
+      <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+	
+	<!-- Logstash 로그 전송을 비동기 처리: CoolSMS 호출 중 예외가 발생해도 Logstash 연결이 끊기지 않음 -->
+    <appender name="ASYNC_LOGSTASH" class="ch.qos.logback.classic.AsyncAppender">
+      <appender-ref ref="LOGSTASH" />
+      <queueSize>512</queueSize>
+      <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+	  <!-- 글로벌 루트 로그 설정 -->
+    <root level="INFO"> <!-- 애플리케이션 전체 기본 로그 레벨 설정을 INFO로 설정-->
+        <appender-ref ref="ASYNC"/> <!-- 콘솔(터미널) 로그 비동기 처리 -->
+        <appender-ref ref="FILE"/>  <!-- 파일 로그 기록(ELK 연동) -->
+        <appender-ref ref="LOGSTASH" />  <!-- Logstash 로그 기록 -->
+    </root>
+</configuration>
